@@ -8,10 +8,6 @@ function blogReducer(state, action){
     switch(action.type){
         case 'SET_BLOGS':
             return action.blogs;
-        case 'ADD_BLOG':
-            return [action.blog, ...state];
-        case 'DELETE_BLOG':
-            return state.filter((_, index) => index !== action.index);
         default:
             return state;
     }
